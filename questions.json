@@ -1,0 +1,35 @@
+{
+"questions":
+
+    [
+        {
+        "question": "Logaritma definīcija: ",
+        "answers": {
+            "a": "Par skaitļa a logaritmu pie bāzes b sauc skaitli n, kurā jākāpina bāze a, lai iegūtu skaitli b.",
+            "b": "Par skaitļa b logaritmu pie bāzes a sauc skaitli n, kurā jākāpina bāze a, lai iegūtu skaitli b.",
+            "c": "Par skaitļa b logaritmu pie bāzes a sauc skaitli n, kurā jākāpina bāze n, lai iegūtu skaitli b."
+        },
+        "correctAnswer": "b"
+        },
+        {
+        "question": "Dotās kvadrātnevienādības <img src='img/kvadratnevienadiba.png'> atrisinājums ir: ",
+        "answers": {
+            "a": "x∈(0;+∞)",
+            "b": "x∈(−∞;0)",
+            "c": "x∈∅",
+            "d": "x∈R"
+        },
+        "correctAnswer": "c"
+        },
+        {
+        "question": "Noteikt, kura funkcija izsaka doto grafiku<br> <img src='img/eksponentfunkcija.png'>",
+        "answers": {
+            "a": "y=2<sup>x</sup>",
+            "b": "y=3<sup>x</sup>",
+            "c": "y=x<sup>2</sup>",
+            "d": "y=2x<sup>2</sup>"
+        },
+        "correctAnswer": "a"
+        }
+    ]
+}
