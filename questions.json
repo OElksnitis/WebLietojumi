@@ -9,7 +9,8 @@
             "b": "Par skaitļa b logaritmu pie bāzes a sauc skaitli n, kurā jākāpina bāze a, lai iegūtu skaitli b.",
             "c": "Par skaitļa b logaritmu pie bāzes a sauc skaitli n, kurā jākāpina bāze n, lai iegūtu skaitli b."
         },
-        "correctAnswer": "b"
+        "correctAnswer": "b",
+        "type": "selection"
         },
         {
         "question": "Dotās kvadrātnevienādības <img src='img/kvadratnevienadiba.png'> atrisinājums ir: ",
@@ -19,7 +20,8 @@
             "c": "x∈∅",
             "d": "x∈R"
         },
-        "correctAnswer": "c"
+        "correctAnswer": "c",
+        "type": "selection"
         },
         {
         "question": "Noteikt, kura funkcija izsaka doto grafiku<br> <img src='img/eksponentfunkcija.png'>",
@@ -29,7 +31,22 @@
             "c": "y=x<sup>2</sup>",
             "d": "y=2x<sup>2</sup>"
         },
-        "correctAnswer": "a"
-        }
+        "correctAnswer": "a",
+        "type": "selection"
+        },
+        {
+            "question": "Noteikt, kura funkcija izsaka doto grafiku<br> <img src='img/eksponentfunkcija.png'>",
+            "answers": {
+                "a": "y=2<sup>x</sup>",
+                "b": "y=3<sup>x</sup>",
+                "c": "y=x<sup>2</sup>",
+                "d": "y=2x<sup>2</sup>"
+            },
+            "correctAnswers": {
+                "a" : "a",
+                "b" : "b"
+            },
+            "type": "check"
+        }    
     ]
 }

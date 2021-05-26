@@ -18,7 +18,7 @@ function buildQuiz(){
     // Iterējam pa katru jautājumu
     myQuestions.forEach(
     (currentQuestion, questionNumber) => {
-
+    if(currentQuestion.type === 'selection'){
     // Mainīgais ar visām iespējamām atbildēm
     const answers = [];
 
@@ -42,11 +42,33 @@ function buildQuiz(){
     <div class="answers"> ${answers.join("")} </div>
     </div>`
     );
+
+
+    }else if(currentQuestion.type === 'check'){
+        const answers = [];
+
+        for(letter in currentQuestion.answers){
+            answers.push(
+                `<label>
+                <input type='checkbox' name="question${questionNumber}" value="${letter}">
+                ${letter} : ${currentQuestion.answers[letter]}
+                </label>
+                `
+            )
+        }
+        output.push(
+            `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join("")} </div>
+            </div>`
+            );
+    }
+
     }
     );
 
     
-    // Savienojam visus HTML outputus vienā virknē, kas sastāv no attiecīgā HTML un izliekam lapā
+    // Savienojam visus HTML outputus vienā virknē un izliekam lapā
     quizContainer.innerHTML = output.join('');
 }
 
@@ -63,7 +85,7 @@ function showResults(){
 
     // Iterējam pa jautājumiem
     myQuestions.forEach( (currentQuestion, questionNumber) => {
-
+        if(currentQuestion.type === 'selection'){
         // Atrodam atzīmēto atbildi
         const answerContainer = answerContainers[questionNumber];
         const selector = `input[name=question${questionNumber}]:checked`;
@@ -82,10 +104,58 @@ function showResults(){
         // Iekrāsojam nepareizās atbildes sarkanas
             answerContainers[questionNumber].style.color = 'red';
         }
-    });
+    }
+    else if(currentQuestion.type === 'check'){
+        const userAnswers = [];
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswerContainers = answerContainer.querySelectorAll(selector);
+        userAnswerContainers.forEach(element => {
+            userAnswers.push(element.value);
+        });
+        const correctAnswers = new Array();
+        for(ans in currentQuestion.correctAnswers){
+            correctAnswers.push(currentQuestion.correctAnswers[ans]);
+        }
+        
+        ansValue = 1/correctAnswers.length;
+        
+        const selector1 = "label";
+        const selector2 ="input";
+        const labels = answerContainer.querySelectorAll(selector1);
+        const answers = [];
+        labels.forEach(ans => {
+            // ans.style.color = "red"; 
+            answers.push(ans.querySelector(selector2));
+        });
+        
 
+
+        for(i = 0; i<userAnswerContainers.length;i++){
+            console.log('check');
+            for(ans in correctAnswers){
+                console.log("correct answer:"+correctAnswers[ans]);
+                if(userAnswerContainers[i].value === correctAnswers[ans]){
+                    userAnswerContainers[i].parentElement.style.color='lightgreen';
+                    console.log('Success');
+                    numCorrect += ansValue;
+                    break;
+                }else{
+                    userAnswerContainers[i].parentElement.style.color = 'red';
+                }
+            }
+            
+        }
+
+
+
+    }
+
+
+
+    });
     // Parādam pareizo atbilžu skaitu
-    resultsContainer.innerHTML = `${numCorrect} pareizi no ${myQuestions.length}`;
+    resultsContainer.innerHTML = `Iegūti ${numCorrect} punkti no ${myQuestions.length}`;
     // Noņemam iesniegšanas pogu, lai lietotājs nevar iesniegt testu atkārtoti
     submitButton.remove();
     // Parādam restartēšanas pogu
@@ -169,3 +239,4 @@ submitButton.addEventListener('click', showResults);
 previousButton.addEventListener("click", showPreviousSlide);
 nextButton.addEventListener("click", showNextSlide);
 restartButton.addEventListener("click", restart);
+startButton.addEventListener("click", startQuiz)
