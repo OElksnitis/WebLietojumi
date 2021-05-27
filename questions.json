@@ -1,6 +1,5 @@
 {
 "questions":
-
     [
         {
         "question": "Logaritma definīcija: ",
@@ -53,6 +52,59 @@
 
             "correctAnswer": "4",
             "type": "text"
-        }     
+        },
+        {
+            "question": "Ja viens no blakusleņķiem ir šaurs, tad otrs blakusleņķis ir taisns.",
+            "answers": {
+                "a": "Patiess",
+                "b": "Aplams"
+            },
+            "correctAnswer":  "b",
+            "type": "selection"
+        },
+        {
+            "question": "Cik dažādu divciparu skaitļu var uzrakstīt ar cipariem <b>4</b> un <b>8</b> (cipari drīkst atkārtoties)?",
+            
+            "correctAnswer": "4",
+            "type": "text"
+        },
+        {
+            "question": "Aprēķini proporcijas <img src='img/proporcija.png'>",
+            "correctAnswer": "38",
+            "type": "text"
+        },
+        {
+            "question": "Kurš skaitlis pieder skaitļu intervālam <b>(9; 10)</b>?",
+            "answers": {
+                "a": "sakne no 10",
+                "b": "sakne no 20",
+                "c": "sakne no 93",
+                "d": "sakne no 121"
+            },
+            "correctAnswer": "c",
+            "type": "dropdown"
+        },
+        {
+            "question": "Dziesmu un deju svētkos no skolas piedalījās <b>x</b> skolēni. Zināms, ka <b>40%</b> jeb <b>12</b> skolēni bija deju kolektīva dalībnieki. Kurš vienādojums apraksta doto situāciju?",
+            "answers": {
+                "a": "0,4x = 12",
+                "b": "12 * 0,4 = x",
+                "c": "12x = 0,4",
+                "d": "x : 0,4 = 12"
+            },
+            "correctAnswer": "a",
+            "type": "selection"
+        },
+        {
+            "question": "Kurš skaitlis izsaka dotā paralelograma ABCD laukumu?<br>AB=5,BE=4,AE=3,ED=6<br><img src='img/parallelograms.png'>",
+            "answers": {
+                "a": "20",
+                "b": "36",
+                "c": "18",
+                "d": "45"
+            },
+            "correctAnswer": "b",
+            "type": "selection"
+        }
     ]
 }

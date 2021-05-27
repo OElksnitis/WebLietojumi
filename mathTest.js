@@ -67,7 +67,20 @@ function buildQuiz(){
         output.push(
             `<div class="slide">
             <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> <input type='text' name="question${questionNumber}"</div>
+            <div class="answers"> <input type='text' name="question${questionNumber}"></div>
+            </div>`
+        )
+
+    }else if(currentQuestion.type === 'dropdown'){
+        let answers = [];
+        for(letter in currentQuestion.answers) {
+            answers.push( `<option value='${letter}'>${currentQuestion.answers[letter]}</option>`);
+        }
+        
+        output.push(
+            `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> <select name="question${questionNumber}">${answers.join('')}</select></div>
             </div>`
         )
 
@@ -177,8 +190,17 @@ function showResults(){
             userAnswer.style.backgroundColor = 'red';
         }
 
-
-
+        
+    } else if(currentQuestion.type === 'dropdown'){
+        const answerContainer = answerContainers[questionNumber];
+        const selector = 'select';
+        const userAnswer = answerContainer.querySelector(selector);
+        if(userAnswer.value === currentQuestion.correctAnswer){
+            userAnswer.style.backgroundColor = 'lightgreen';
+            numCorrect++;
+        }else{
+            userAnswer.style.backgroundColor = 'red';
+        }
     }
 
 
