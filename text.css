@@ -1,24 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
-@import "variables.css";
 
-body, h1 {
-  font-size: var(--main-font);
-  font-weight: var(--main-weight);
-}
 body{
+	font-size: 20px;
 	font-family: 'Work Sans', sans-serif;
-	color: var(--dgray);
+	color: #333;
+  font-weight: 300;
   text-align: center;
-  background-color: var(--main-bg);
+  background-color: #f8f6f0;
 }
 h1{
+  font-weight: 300;
   margin: 0px;
   padding: 10px;
-  background-color: var(--gray);
-  color: var(--white-txt);
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
 }
 .question{
-  font-size: var(--q-font);
+  font-size: 30px;
   margin-bottom: 10px;
 }
 .answers {
@@ -32,9 +31,9 @@ h1{
 }
 button{
   font-family: 'Work Sans', sans-serif;
-	font-size: var(--main-font);
-	background-color: var(--btn);
-	color: var(--white-txt);
+	font-size: 22px;
+	background-color: #279;
+	color: #fff;
 	border: 0px;
 	border-radius: 3px;
 	padding: 20px;
@@ -44,11 +43,15 @@ button{
   
 }
 button:hover{
-	background-color: var(--btn-hvr);
+	background-color: #38a;
 }
 #restart{
   margin-top: 50px;
 }
+
+
+
+
 .slide{
   position: absolute;
   left: 0px;
@@ -66,17 +69,4 @@ button:hover{
   position: relative;
   height: 200px;
   margin-top: 40px;
-}
-h3 {
-  width: 300px;
-  margin: auto;
-}
-select {
-  width: 160px;
-  height: 22px;
-  font-size: 15px;
-}
-h3 {
-  width: 300px;
-  margin: auto;
 }

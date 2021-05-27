@@ -1,0 +1,14 @@
+:root {
+    /*colors*/
+    --main-bg: #f8f6f0;
+    --white-txt: #fff;
+    --dgray: #333;
+    --gray: #444;
+    --btn: #279;
+    --btn-hvr: #38a;
+    
+    /*sizes*/
+    --main-font: 20px;
+    --main-weight: 300;
+    --q-font: 30px;
+  }
