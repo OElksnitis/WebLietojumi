@@ -62,6 +62,15 @@ function buildQuiz(){
             <div class="answers"> ${answers.join("")} </div>
             </div>`
             );
+    }else if(currentQuestion.type === 'text'){
+
+        output.push(
+            `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> <input type='text' name="question${questionNumber}"</div>
+            </div>`
+        )
+
     }
 
     }
@@ -145,6 +154,19 @@ function showResults(){
                 }
             }
             
+        }
+
+
+
+    } else if(currentQuestion.type === 'text'){
+        const answerContainer = answerContainers[questionNumber];
+        const selector = 'input';
+        const userAnswer = answerContainer.querySelector(selector);
+        if(userAnswer.value === currentQuestion.correctAnswer){
+            userAnswer.style.backgroundColor = 'lightgreen';
+            numCorrect++;
+        }else{
+            userAnswer.style.backgroundColor = 'red';
         }
 
 

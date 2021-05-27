@@ -45,7 +45,7 @@ function timerCycle() {
       hr = '0' + hr;
     }
 
-    timer.innerHTML = hr + ':' + min + ':' + sec;
+    timer.innerHTML ='Patērētais laiks: ' + hr + ':' + min + ':' + sec;
 
     setTimeout("timerCycle()", 1000);
   }

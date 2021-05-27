@@ -45,7 +45,9 @@ button{
 button:hover{
 	background-color: #38a;
 }
-
+#restart{
+  margin-top: 50px;
+}
 
 
 
