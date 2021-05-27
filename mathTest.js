@@ -231,7 +231,7 @@ function showResults(){
 
     });
     // Parādam pareizo atbilžu skaitu
-    resultsContainer.innerHTML = `Iegūti ${numCorrect} punkti no ${myQuestions.length}`;
+    resultsContainer.innerHTML = `Iegūti ${numCorrect.toFixed(2)} punkti no ${myQuestions.length}`;
     // Noņemam iesniegšanas pogu, lai lietotājs nevar iesniegt testu atkārtoti
     submitButton.remove();
     // Parādam restartēšanas pogu
