@@ -77,7 +77,7 @@ function buildQuiz(){
         for(letter in currentQuestion.answers){
             // console.log(currentQuestion.answers[letter]);
             // console.log(letter);
-            answerString += ` <option value=${currentQuestion.answers[letter]}>${currentQuestion.answers[letter]}</option>`;
+            answerString += ` <option value="${currentQuestion.answers[letter]}">${currentQuestion.answers[letter]}</option>`;
         }
         answerString += `</select>`
 
