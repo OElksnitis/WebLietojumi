@@ -2,7 +2,7 @@
 
 
 function startQuiz(){
-    
+    startTimer();
     startButton.style.display = 'none';
     document.getElementById('intro').style.display = 'none';
     buildQuiz();
@@ -75,7 +75,7 @@ function buildQuiz(){
 
 
 function showResults(){
-
+    stopTimer();
     
     // Savācam atbilžu konteinerus no testa
     const answerContainers = quizContainer.querySelectorAll('.answers');
