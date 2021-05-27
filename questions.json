@@ -1,6 +1,5 @@
 {
 "questions":
-
     [
         {
         "question": "Logaritma definīcija: ",
@@ -55,20 +54,100 @@
             "type": "text"
         },
         {
-            "question": "Atbilstība",
-            "answers" : {
-                "a": "Viens",
-                "b": "Divi",
-                "c": "Trīs",
-                "d": "Četri"
+            "question": "Ja viens no blakusleņķiem ir šaurs, tad otrs blakusleņķis ir taisns.",
+            "answers": {
+                "a": "Patiess",
+                "b": "Aplams"
+            },
+            "correctAnswer":  "b",
+            "type": "selection"
+        },
+        {
+            "question": "Cik dažādu divciparu skaitļu var uzrakstīt ar cipariem <b>4</b> un <b>8</b> (cipari drīkst atkārtoties)?",
+            
+            "correctAnswer": "4",
+            "type": "text"
+        },
+        {
+            "question": "Aprēķini proporcijas <img src='img/proporcija.png'>",
+            "correctAnswer": "38",
+            "type": "text"
+        },
+        {
+            "question": "Atzīmē:",
+            "answers": {
+                "a": "t = s * v",
+                "b": "t = s : v",
+                "c": "s = t / v",
+                "d": "s = t * v",
+                "e": "v = s * t",
+                "f": "v = s / t"
             },
             "correctAnswers": {
-                "Pirmais": "Divi",
-                "Otrais": "Viens",
-                "Trešais": "Trīs",
-                "Ceturtais": "Četri"
+                "Ar kuru formulu var dabūt ceļu" : "s = t * v",
+                "Ar kuru formulu var dabūt laiku" : "t = s : v",
+                "Ar kuru formulu var dabūt ātrumu" : "v = s / t"
             },
             "type": "drop"
-        }  
+        },
+        {
+            "question": "Dziesmu un deju svētkos no skolas piedalījās <b>x</b> skolēni. Zināms, ka <b>40%</b> jeb <b>12</b> skolēni bija deju kolektīva dalībnieki. Kurš vienādojums apraksta doto situāciju?",
+            "answers": {
+                "a": "0,4x = 12",
+                "b": "12 * 0,4 = x",
+                "c": "12x = 0,4",
+                "d": "x : 0,4 = 12"
+            },
+            "correctAnswer": "a",
+            "type": "selection"
+        },
+        {
+            "question": "Kurš skaitlis izsaka dotā paralelograma <b>ABCD</b> laukumu?<br><b>AB=5,BE=4,AE=3,ED=6</b><br><img src='img/parallelograms.png'>",
+            "answers": {
+                "a": "20",
+                "b": "36",
+                "c": "18",
+                "d": "45"
+            },
+            "correctAnswer": "b",
+            "type": "selection"
+        },
+        {
+            "question": "No formulas <b>R = U : I</b> izsaki lielumu <b>U</b>",
+            "answers": {
+                "a": "U = IR",
+                "b": "U = I : R",
+                "c": "U = R : I"
+            },
+            "correctAnswer": "a",
+            "type": "selection"
+        },
+        {
+            "question": "<b>20%</b> no <b>360</b> ir <b>180</b>?",
+            "answers": {
+                "a": "Aplams",
+                "b": "Patiess"
+            },
+            "correctAnswer": "a",
+            "type": "selection"
+        },
+        {
+            "question": "Ja taisnleņķa trijstūra katešu garumi ir <b>3 cm</b> un <b>4 cm</b>, tad tā hipotenūzas garums ir <b>5 cm</b>.",
+            "answers": {
+                "a": "Aplams",
+                "b": "Patiess"
+            },
+            "correctAnswer": "b",
+            "type": "selection"
+        },
+        {
+            "question": "Trapeces diagonāles ir vienāda garuma.",
+            "answers": {
+                "a": "Aplams",
+                "b": "Patiess"
+            },
+            "correctAnswer": "a",
+            "type": "selection"
+        }
     ]
 }
