@@ -142,17 +142,25 @@ function showResults(){
 
         for(i = 0; i<userAnswerContainers.length;i++){
             console.log('check');
+            var iscorrect = false;
             for(ans in correctAnswers){
                 console.log("correct answer:"+correctAnswers[ans]);
                 if(userAnswerContainers[i].value === correctAnswers[ans]){
-                    userAnswerContainers[i].parentElement.style.color='lightgreen';
-                    console.log('Success');
-                    numCorrect += ansValue;
+                    iscorrect = true;
                     break;
                 }else{
-                    userAnswerContainers[i].parentElement.style.color = 'red';
+                    iscorrect = false;
                 }
             }
+            if (iscorrect){
+                userAnswerContainers[i].parentElement.style.color='lightgreen';
+                    console.log('Success');
+                    numCorrect += ansValue;
+            }else{
+                userAnswerContainers[i].parentElement.style.color = 'red';
+                numCorrect -= ansValue;
+            }
+
             
         }
 

@@ -35,16 +35,16 @@
         "type": "selection"
         },
         {
-            "question": "Noteikt, kura funkcija izsaka doto grafiku<br> <img src='img/eksponentfunkcija.png'>",
+            "question": "Atzīmēt patiesos apgalvojumus par doto grafiku (Par nepareizi atzīmētu atbildi punkti tiek atskaitīti)<br> <img src='img/linearaFunkcija.png'>",
             "answers": {
-                "a": "y=2<sup>x</sup>",
-                "b": "y=3<sup>x</sup>",
-                "c": "y=x<sup>2</sup>",
-                "d": "y=2x<sup>2</sup>"
+                "a": "Funkcija ir augoša",
+                "b": "Funkcija ir dilstoša",
+                "c": "K>0",
+                "d": "K<0"
             },
             "correctAnswers": {
                 "a" : "a",
-                "b" : "b"
+                "b" : "c"
             },
             "type": "check"
         },
