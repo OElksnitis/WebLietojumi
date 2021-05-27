@@ -53,6 +53,22 @@
 
             "correctAnswer": "4",
             "type": "text"
-        }     
+        },
+        {
+            "question": "Atbilstība",
+            "answers" : {
+                "a": "Viens",
+                "b": "Divi",
+                "c": "Trīs",
+                "d": "Četri"
+            },
+            "correctAnswers": {
+                "Pirmais": "Divi",
+                "Otrais": "Viens",
+                "Trešais": "Trīs",
+                "Ceturtais": "Četri"
+            },
+            "type": "drop"
+        }  
     ]
 }

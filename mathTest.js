@@ -67,9 +67,34 @@ function buildQuiz(){
         output.push(
             `<div class="slide">
             <div class="question"> ${currentQuestion.question} </div>
-            <div class="answers"> <input type='text' name="question${questionNumber}"</div>
+            <div class="answers"> <input type='text' name="question${questionNumber}"></div>
             </div>`
         )
+
+    } else if(currentQuestion.type === 'drop'){
+        const answers = [];
+        answerString = `<select name="question${questionNumber}">`;
+        for(letter in currentQuestion.answers){
+            // console.log(currentQuestion.answers[letter]);
+            // console.log(letter);
+            answerString += ` <option value=${currentQuestion.answers[letter]}>${currentQuestion.answers[letter]}</option>`;
+        }
+        answerString += `</select>`
+
+        for(letter in currentQuestion.correctAnswers){
+        answers.push(
+            `<label>
+            ${letter} :
+            ${answerString}
+            </label>`
+        );
+        }
+        output.push(
+            `<div class="slide">
+            <div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join('')}</div>
+            </div>`
+        );
 
     }
 
@@ -141,10 +166,10 @@ function showResults(){
 
 
         for(i = 0; i<userAnswerContainers.length;i++){
-            console.log('check');
+           
             var iscorrect = false;
             for(ans in correctAnswers){
-                console.log("correct answer:"+correctAnswers[ans]);
+                // console.log("correct answer:"+correctAnswers[ans]);
                 if(userAnswerContainers[i].value === correctAnswers[ans]){
                     iscorrect = true;
                     break;
@@ -178,6 +203,27 @@ function showResults(){
         }
 
 
+
+    } else if(currentQuestion.type === 'drop'){
+        const answerContainer = answerContainers[questionNumber];
+        const selector = 'select';
+        const userAnswers = answerContainer.querySelectorAll(selector);
+        const correctAnswers = currentQuestion.correctAnswers;
+        const ansValue = 1/userAnswers.length;
+
+        i = 0;
+        for(ans in correctAnswers){
+            if(userAnswers[i].value === currentQuestion.correctAnswers[ans]){
+                console.log('Correct!');
+                userAnswers[i].style.backgroundColor = 'lightgreen';
+                numCorrect += ansValue;
+                i++;
+            }else{
+                console.log('Not correct');
+                userAnswers[i].style.backgroundColor = 'red';
+                i++;
+            }
+        }
 
     }
 
